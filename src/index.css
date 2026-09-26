@@ -153,6 +153,8 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
+  /* 編集中のカードが高くなっても、隣のカードは引き伸ばさない */
+  align-items: start;
 }
 
 /* 物件の新規登録エリア */
