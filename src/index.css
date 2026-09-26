@@ -134,13 +134,113 @@ button {
   background: #f3f4f6;
 }
 
+.properties-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.status-text {
+  margin: 0;
+  color: #666;
+  text-align: center;
+}
+
 .property-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
-  padding: 24px;
-  max-width: 1100px;
-  margin: 0 auto;
+}
+
+/* 物件の新規登録エリア */
+.new-property {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.new-property h2 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+}
+
+/* 物件フォーム（新規登録・編集で共通） */
+.property-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+/* カード内の編集フォームは縦1列に並べる */
+.property-card .property-form {
+  grid-template-columns: 1fr;
+}
+
+.property-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.property-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.property-form .message {
+  grid-column: 1 / -1;
+}
+
+.form-actions,
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.card-actions {
+  margin-top: 16px;
+}
+
+/* ボタン */
+.primary-button,
+.secondary-button,
+.danger-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.primary-button {
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+}
+
+.secondary-button {
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.danger-button {
+  border: 1px solid #fca5a5;
+  background: #fff;
+  color: #dc2626;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .property-card {
@@ -150,7 +250,7 @@ button {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.property-card h2 {
+.property-card h3 {
   margin: 0 0 12px;
   font-size: 1.1rem;
 }
@@ -172,4 +272,16 @@ button {
   margin: 0;
   color: #555;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 間取りはバッジ風に表示する */
+.property-card .layout {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.8rem;
 }

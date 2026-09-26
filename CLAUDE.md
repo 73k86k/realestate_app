@@ -9,11 +9,14 @@ Supabase 認証付きの不動産管理 Web アプリ（realestate_app）。
 - フロントエンド: React + Vite（JavaScript / JSX）
 - ルーティング: react-router-dom
 - 認証: Supabase Auth（メールアドレス＋パスワード）
-- 物件データ: 現在はダミーデータ（`src/data/properties.js`）
+- 物件データ: Supabase の `properties` テーブル（RLS で「自分が登録した物件のみ」操作可能）
 
 ### ディレクトリ構成
 
+- `supabase/migrations/` … DB のテーブル・RLS ポリシーを定義する SQL（Supabase ダッシュボードの SQL Editor で実行する）
 - `src/lib/supabaseClient.js` … Supabase クライアント（接続情報は `.env` から読み込む）
+- `src/lib/propertiesApi.js` … 物件の CRUD 操作（一覧取得・登録・更新・削除）
+- `src/components/PropertyForm.jsx` … 物件の新規登録・編集で共通のフォーム
 - `src/contexts/AuthContext.jsx` … ログイン状態の管理と `useAuth` フック
 - `src/components/ProtectedRoute.jsx` … 未ログイン時のリダイレクト（`ProtectedRoute`）、ログイン済み時のリダイレクト（`GuestRoute`）
 - `src/pages/` … 画面（Login / Signup / Properties）
