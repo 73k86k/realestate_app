@@ -28,7 +28,12 @@ Supabase 認証付きの不動産管理 Web アプリ（realestate_app）。
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_PUBLISHABLE_KEY`
 
-### デプロイ（Vercel）
+## デプロイ情報
+
+- 本番URL：https://realestate-app-delta-ten.vercel.app
+- Supabaseプロジェクト名：realestate-app
+
+### Vercel の設定
 
 - `vercel.json` で全 URL を `index.html` に書き換えている（`/properties` などを直接開いたりリロードしたりしても 404 にならないようにするため）
 - 環境変数（`VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY`）は Vercel ダッシュボードで設定する。`vercel.json` には書かない
