@@ -1,0 +1,175 @@
+/* 全体の基本スタイル */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  background: #f4f5f7;
+  color: #222;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 40vh;
+  color: #666;
+}
+
+/* ログイン・会員登録画面 */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form h1 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.message.error {
+  color: #dc2626;
+}
+
+.message.notice {
+  color: #15803d;
+}
+
+.switch-link {
+  margin: 0;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* 物件一覧画面 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-email {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.logout-button:hover {
+  background: #f3f4f6;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.property-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.property-card h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.property-card .rent {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.property-card .rent span {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #666;
+}
+
+.property-card .area {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
